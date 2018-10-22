@@ -35,13 +35,13 @@ category:
     </div>
     <main class="page-content" id="product-listing-container">
         {{#if category.products}}
-            {{> components/amp/category/product-listing}}
+            {{> components/amp/category/product-listing settings=../settings}}
         {{else}}
             <p>{{lang 'categories.no_products'}}</p>
         {{/if}}
     </main>
     {{> components/amp/category/subcategories}}
-    {{> components/amp/common/footer }}
+    {{> components/amp/common/footer settings=../settings}}
     {{#if settings.amp_analytics_id}}
         <amp-analytics type="googleanalytics">
             <script type="application/json">
